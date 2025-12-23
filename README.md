@@ -4,11 +4,9 @@ A custom statusline script for Claude Code on macOS that displays useful session
 
 ## Screenshot
 
-```
-my-project | Opus | ████░░░░░░ 42% | 156.3K | 5h:23% 7d:45% | (main)
-```
+![Example statusline](example.png)
 
-## What it displays
+## What It Displays
 
 - **Repository name** - Current project directory name
 - **Model** - Active Claude model (e.g., "Opus")
@@ -25,11 +23,28 @@ my-project | Opus | ████░░░░░░ 42% | 156.3K | 5h:23% 7d:45% 
 
 ## Installation
 
+### With AI Agent
+
+Copy and paste this prompt into Claude Code:
+
+```
+Download https://raw.githubusercontent.com/robinebers/claude-code-statusline/main/statusline-command.sh to ~/.claude/statusline-command.sh and make it executable. Then update ~/.claude/settings.json to add the statusLine configuration (create the file if it doesn't exist, preserve existing settings if it does):
+
+{
+  "statusLine": {
+    "type": "command",
+    "command": "~/.claude/statusline-command.sh"
+  }
+}
+```
+
+### Manual Install
+
 1. Copy the script to your Claude directory:
 
 ```bash
 mkdir -p ~/.claude
-cp statusline-command.sh ~/.claude/
+curl -o ~/.claude/statusline-command.sh https://raw.githubusercontent.com/robinebers/claude-code-statusline/main/statusline-command.sh
 chmod +x ~/.claude/statusline-command.sh
 ```
 
@@ -46,7 +61,7 @@ chmod +x ~/.claude/statusline-command.sh
 
 3. Restart Claude Code to see the statusline.
 
-## How it works
+## How It Works
 
 The script receives JSON on stdin from Claude Code containing:
 - Workspace info (project directory)
