@@ -104,7 +104,7 @@ five_hour_display=$(color_pct "$five_hour_pct")
 seven_day_display=$(color_pct "$seven_day_pct")
 
 # Output status line
-printf "\033[33m%s\033[0m | %s | %b | \033[36m%s\033[0m | 5h:%b 7d:%b | (\033[33m%s\033[0m)" \
+printf "\033[33m%s\033[0m | %s | %b | \033[36m%s\033[0m | 5h %b 7d %b | (\033[33m%s\033[0m)" \
   "$repo_name" \
   "$model" \
   "$context_display" \

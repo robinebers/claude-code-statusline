@@ -27,16 +27,16 @@ A custom statusline script for Claude Code on macOS that displays useful session
 
 Copy and paste this prompt into Claude Code:
 
-```
-Download https://raw.githubusercontent.com/robinebers/claude-code-statusline/main/statusline-command.sh to ~/.claude/statusline-command.sh and make it executable. Then update ~/.claude/settings.json to add the statusLine configuration (create the file if it doesn't exist, preserve existing settings if it does):
-
-{
-  "statusLine": {
-    "type": "command",
-    "command": "~/.claude/statusline-command.sh"
-  }
-}
-```
+> ```Download https://raw.githubusercontent.com/robinebers/claude-code-statusline/main/statusline-command.sh to ~/.claude/statusline-command.sh and make it executable. Then update ~/.claude/settings.json to add the statusLine configuration (create the file if it doesn't exist, preserve existing settings if it does):```
+>
+> ```json
+> {
+>   "statusLine": {
+>     "type": "command",
+>     "command": "~/.claude/statusline-command.sh"
+>   }
+> }
+> ```
 
 ### Manual Install
 
